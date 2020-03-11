@@ -1,0 +1,529 @@
+@import url('https://fonts.googleapis.com/css?family=Ramaraja|Tenali+Ramakrishna&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cairo|Exo&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Pinyon+Script&display=swap');
+
+/*Global*/
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container{
+    margin: 7rem 5%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background: #cfcfcf; 
+    border-radius: 20px;
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, .18),
+                -10px -10px 25px rgba(255, 255, 255, 0.459);
+}
+
+html{
+    font-size: 10px; 
+}
+
+body{
+	width: 100%;
+	height: 100%;
+	background: rgb(228, 228, 228);
+}
+
+a{
+	text-decoration: none;
+}
+
+h2{
+    color: #333d9b;
+    font-family: 'Cairo', sans-serif;
+    text-align: center;
+    font-size: 3.3rem;
+    text-shadow: 4px 4px 15px rgba(0, 0, 0, .2);
+}
+
+p{
+    margin-top: 3rem;
+    color: #403e5a;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-shadow: 4px 4px 15px rgba(0, 0, 0, .2);
+    font-size: 1.7rem;
+}
+
+img{
+    width: 100%;
+}
+/*End Global*/
+
+/*Header*/
+header{
+    z-index: 30;
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    height: 70px;
+    display: flex;
+	justify-content: space-around;
+    align-items: center;
+    padding: 10px 5%;
+}
+
+.menu-toggler{
+    display: none;
+    color: black;
+    z-index: 250;
+}
+
+.Logo{
+    width: 50px;  
+    height: 50px;
+    min-width: 50px;
+    cursor: pointer;
+}
+
+.nav-list > ul {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    height: 70px;
+	justify-content: space-evenly;
+}
+
+.nav-list li{
+    width: 100px;
+    text-align: center;
+    list-style: none;
+}
+
+.nav-link{
+    position: relative;
+    font-family: 'Tenali Ramakrishna', sans-serif; 
+    color: #0a0a0a;
+    text-transform: uppercase;
+    font-size: 2rem;
+    transition: all 150ms ease-in-out;
+}
+
+.nav-link.active{
+    font-size: 2.5rem;
+}
+
+.active:after{
+    position: absolute;
+    content: '';
+    height: 1px;
+    bottom: 10px; 
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 50%;
+    background: #0a0a0a;
+    transition: all 150ms ease-in-out;
+}
+
+.active:hover:after{
+    width: 100%;
+}
+
+.nav-link.active:hover{
+    font-size: 2.7rem;
+}
+
+.nav-link:hover{
+    font-size: 2.5rem;
+}
+/*End Header*/
+
+
+/*Home Image*/
+.landing-section{
+    width: 100%;
+    height: 100vh;
+}
+
+.landing-image{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: url('./image/ArenaAlfieri.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.landing-text, .landing-logo{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 15;
+}
+
+.landing-text h2{
+    font-size: 70px;
+    
+    font-family: 'Tenali Ramakrishna', sans-serif; 
+    font-family: 'Pinyon Script', cursive;
+    font-weight: 100;
+    color: rgb(230, 230, 230);
+    text-shadow: 5px 5px 20px rgba(0, 0, 0, .4);
+}
+
+.landing-logo{
+    display: none;
+    width: 350px;
+    opacity: .2;
+}
+/*End Landing Image*/
+
+/*Box Container*/
+.container div{
+    flex: 1;
+}
+
+.description{
+    margin: 6rem 5rem;
+    align-content: center;
+}
+
+.box-item{
+    width: 100%;
+    height: 100%;
+}
+
+.box-image{
+    padding: 4em;
+    width: 100%;
+    height: 100%;
+    border-radius: 8em;
+    max-width: 100%;
+    height: auto;
+}
+/*end Box Container*/
+
+/*Camere/Rooms services*/
+.services{
+    margin: auto;
+    height: 27rem;
+    width: 90rem;
+    background: #cfcfcf; 
+    border-radius: 20px;
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, .18),
+                -10px -10px 25px rgba(255, 255, 255, 0.459);
+}
+
+.services i{
+    color: rgb(93, 93, 93);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.46);
+}
+
+.services p{
+    margin: 0 20%;
+}
+
+.box-item.room-image{
+    max-width: 550px;
+}
+/*End Camere/rooms Services*/
+
+
+button{
+    display:inline-block;
+    font-family: 'Cairo', sans-serif;
+    padding:0.5em 2em;
+    margin-top: 4rem;
+    border:0.15em solid #333d9b;
+    border-radius: .3em;
+    font-weight:600;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #333d9b;
+    text-align:center;
+    transition: all 0.2s;
+}
+
+button:hover{
+    color:#ffffff;
+    background-color: #333d9b;
+}
+
+.languageButton{
+    font-family: 'Tenali Ramakrishna', sans-serif;
+    padding:0.05em 1em;
+    margin: 0;
+    border:0.02em solid #000000;
+    font-weight:500;
+    font-size: 2rem;
+    color: #000000;
+    text-align:center;
+    transition: all 0.2s;
+}
+
+.languageButton:hover{
+    color:#ffffff;
+    background-color: #000000;
+}
+
+/*Posizione*/
+iframe{
+    width: 50vw;
+    margin-top: 4em;
+    margin-bottom: 4em;
+    margin-right: 4em;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.153);
+}
+
+.box-image.aereoporto{
+    max-width: 500px;
+    width: 100%;
+}
+/*end posizione*/
+
+/*Check-in*/
+.services.check-in{
+    text-align: center;
+}
+
+.title{
+    margin: auto;
+    margin-top: 6rem;
+    width: 80rem;
+}
+
+.container.rule-list{
+    text-align: inherit;
+}
+/*End Check-in*/
+
+/*Contattaci*/
+form{
+    text-align: center;
+    font-family: 'Cairo', sans-serif;
+	width: 800px;
+	margin: 0 auto;
+}
+
+form label{
+    color: #403e5a;
+    font-size: 1.5rem;
+}
+
+input,
+textarea{
+    border-radius: 20px;
+    font-family: 'Cairo', sans-serif;
+	width: 100%;
+	padding: 1.3rem;
+    margin-bottom: 20px;
+    border: none;
+    outline: none;
+}
+
+input[type="submit"]{
+    font-family: 'Cairo', sans-serif;
+    color: black;
+	width: initial;
+	background-color: #577bf3;
+	padding: 1rem 2rem;
+	border-radius: .8rem;
+	cursor: pointer;
+	transition: all 650ms;
+}
+
+input:focus, textarea:focus{
+    box-shadow: 0 0 4px 1pt #577bf3;
+}
+
+input[type="submit"]:hover{
+	color: white;
+	background-color: #233261;
+}
+/*End Contattaci*/
+
+
+/*Footer*/
+.copyright{
+    width: 100%;
+	text-align: center;
+	background-color: #252525;
+	position: relative;
+}
+
+.copyright p{
+    color: rgb(219, 219, 219);
+    font-size: 1.4rem;
+    padding: 15px;
+}
+
+.copyright p a{
+    text-decoration: none;
+    color: rgb(219, 219, 219);
+}
+/*End Footer*/
+
+/*Success Page*/
+.success-text{
+    position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	text-align: center;
+}
+
+.success-text h2{
+	font-size: 5rem;
+	margin-bottom: 2rem;
+}
+
+.success-text p{
+	font-size: 2.5rem;
+	font-weight: 100;
+}
+
+.success-text a p{
+    font-size: 2rem;
+    color: rgb(56, 56, 255);
+}
+
+
+
+/*End Success Page*/
+
+/*Responsiveness*/
+@media screen and (max-width: 1030px) {
+    .menu-toggler{
+        position: absolute;
+        display: inherit;
+        font-size: 2.5rem;
+        top: 50%;
+        right: 2%;
+        transform: translateY(-50%);
+        transition: all 1.5s cubic-bezier(.69,.5,.29,1.88);
+    }
+
+    .menu-toggler-container{
+        width: 100%;
+        top: 0%;
+        text-align: right;
+        position: fixed;
+        height: 70px;
+        background-color: white;
+        z-index: 150;
+    }
+
+    .Logo{
+        display: none;
+    }
+
+    header{
+        height: 100vh;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        clip-path: inset(0 0 100% 0%);
+        -webkit-clip-path: inset(0 0 100% 0%);
+        transition: all 1s ease-in-out;
+        z-index: 50;
+    }
+    
+    header.open{
+        clip-path: inset(0 0 0% 0%);
+        -webkit-clip-path: inset(0 0 0% 0%);
+    }
+    
+    .menu-toggler.open{
+        transform-origin: top;
+        transform: rotate(45deg);
+    }
+
+   
+
+    .languageButton{
+        font-size: 2.5rem;
+    }
+
+    .nav-list{
+        width: 200px;
+        align-items: center;
+    }
+
+    .nav-list > ul {
+        align-items: inherit;
+        white-space: nowrap;
+        height: 70vh;
+        transform: translateY(40px);
+        flex-direction: column;
+    }
+
+    .nav-list > ul > li{
+        width: 100%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    
+    .nav-link{
+        font-size: 3rem;
+    }
+
+    .nav-link:hover, .nav-link.active{
+        font-size: 3.3rem;
+    }
+
+    .nav-link.active:hover{
+        font-size: 3.5rem;
+    }
+
+    .container div.box-item{
+        flex: 2;
+    }
+
+    .services{
+        width: 90%;
+    }
+    
+    .services p{
+        margin: 0 10%;
+    }
+
+    .title{
+        width: 60rem;
+    }
+
+    form{
+        width: 600px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container{
+        flex-direction: column;
+        margin: 4rem 5%;
+    }
+
+    .container .box-item{
+        order: 1;
+    }
+
+    .services p{
+        margin: 0 0%;    
+    }
+
+    .services{
+        padding-bottom: 1rem;
+        height: inherit;
+    }
+
+    .description{
+        margin: .5rem 2rem;
+        align-content: center;
+    }
+
+    .title{
+        width: 75%;
+    }
+
+    form{
+        width: 90%;
+    }
+}
+
